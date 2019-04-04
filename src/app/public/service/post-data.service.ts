@@ -28,7 +28,7 @@ export class PostDataService {
   }
   postingData(formData:dataFormat)
   {
-    return this.httpPost.post("http://localhost:52654236854126655263656/registeredUsers",formData,{
+    return this.httpPost.post("http://localhost:3000/registeredUsers",formData,{
       headers: new HttpHeaders({
         'Content-Type' : 'application/json'
       })

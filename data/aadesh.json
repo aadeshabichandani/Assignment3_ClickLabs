@@ -1,16 +1,16 @@
 {
   "registeredUsers": [
     {
-      "first_name": "Smart",
-      "last_name": "Guy",
-      "email": "aadesh@gmail.com",
+      "first_name": "Aadesh",
+      "last_name": "Abichandani",
+      "email": "abichandani@gmail.com",
       "phone_number": "123456",
       "address": "asdfg",
       "medical_history": "NA",
       "password": "aadesh",
       "confirm_password": "aadesh",
       "id": 1,
-      "full_name": "Smart Guy"
+      "full_name": "Aadesh Abichandani"
     },
     {
       "first_name": "shubham",
@@ -44,16 +44,73 @@
       "password": "aadesh",
       "confirm_password": "aadesh",
       "id": 4
-    }
-  ],
-  "bookings": [
+    },
     {
-      "status":"",
-      "date": "",
-      "time": "",
-      "city": "",
-      "address": ""
+      "first_name": "Rajiv",
+      "last_name": "Goyal",
+      "email": "rajiv@gmail.com",
+      "phone_number": "123",
+      "address": "qwe",
+      "medical_history": "",
+      "password": "as",
+      "confirm_password": "as",
+      "id": 5
     }
   ],
-  "faq": {}
+  "upcomingbookings": [
+    {
+      "status": "started",
+      "date": "27/09/2017",
+      "time": "09:00am",
+      "city": "CDCL,Chandigarh",
+      "address": "Purva Marg : 5, Sector:28B"
+    },
+    {
+      "status": "pending",
+      "date": "27/09/2017",
+      "time": "10:00am",
+      "city": "CDCL,Chandigarh",
+      "address": "Purva Marg:215, Sector:78B"
+    },
+    {
+      "status": "on the way",
+      "date": "27/09/2017",
+      "time": "10:00am",
+      "city": "Gandhinagar,Gujarat",
+      "address": "Gandhi Marg:51, Sector:8A"
+    }
+  ],
+  "pastbookings": [
+    {
+      "status": "completed",
+      "date": "17/07/2016",
+      "time": "11:00am",
+      "city": "Amritsar, Punjab",
+      "address": "Purva Marg:215, Sector:78B"
+    },
+    {
+      "status": "completed",
+      "date": "22/03/2016",
+      "time": "06:00am",
+      "city": "Shimla,Himachal",
+      "address": "Dakshin Marg:25, Sector:12D"
+    }
+  ],
+  "faq": [
+    {
+      "ques": "What is your name?",
+      "myfaq": "Aadesh Abichandani",
+      "id": 1
+    },
+    {
+      "ques": "Where are you from?",
+      "myfaq": "I am from Gujarat, India.",
+      "id": 2
+    },
+    {
+      "ques": "Where do you work?",
+      "myfaq": "ClickLabs, Chandigarh",
+      "id": 3
+    }
+  ]
 }

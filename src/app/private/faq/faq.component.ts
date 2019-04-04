@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataService } from 'src/app/public/service/get-data.service';
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  constructor() { }
+  public faq:any=[];
+  constructor(private getData:GetDataService) { }
 
   ngOnInit() {
+    this.getData.gettingFaqData().subscribe((result)=>{this.faq=result})
   }
+  
+  
 
 }

@@ -1,0 +1,16 @@
+<div class="data" *ngFor="let past of pastData">
+    <p>{{past.date}},{{past.time}}</p>
+    <div class="childContainer">
+      <p [ngClass]="{
+        'completed':past.status === 'completed'
+      }">
+        <b>{{past.status | uppercase}}</b>
+      </p>
+    </div>
+  
+    <p><b>{{past.city}}</b>
+      <br>
+      {{past.address}}
+    </p>
+  
+  </div>

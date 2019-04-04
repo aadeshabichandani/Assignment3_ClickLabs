@@ -1,4 +1,4 @@
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -23,9 +23,7 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
-  /* .topBar{
-      width: 99%;
-  } */
+  
   .link{
     float: right;
   }
@@ -79,4 +77,32 @@ ul {
   } 
   .topBar{
     box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+  } */
+li
+{
+  color: red;
+  
+}
+ .drop{
+   
+    padding-left: 85%;
   }
+  .navbar
+  {
+    background-color: rgb(32, 192, 11);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+  .dropdown-menu{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+
+  .dynamicHeader{
+    text-align: center;
+    color: green;
+    text-shadow: 0px 3px 5px  rgba(0,0,0,0.2);
+}
+.dropdown-item{
+  cursor: pointer;
+}

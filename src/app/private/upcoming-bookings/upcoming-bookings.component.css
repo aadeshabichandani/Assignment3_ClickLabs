@@ -1,0 +1,23 @@
+.data{
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    margin: 1%;
+    background-color: rgb(212, 233, 252);
+    text-align: left;
+}
+.childContainer
+{
+    padding-left: 82%;
+}
+.started{
+    color: rgb(54, 16, 61);
+}
+.onWay{
+    color: rgb(248, 122, 4);
+
+}
+.pending{
+    color:rgb(236, 13, 13);
+
+}

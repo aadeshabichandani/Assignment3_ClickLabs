@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { FaqComponent } from './faq/faq.component';
 import { CanActivateGuardService } from './services/canActivateGuard.service';
+import { UpcomingBookingsComponent } from './upcoming-bookings/upcoming-bookings.component';
+import { PastBookingsComponent } from './past-bookings/past-bookings.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { CanActivateGuardService } from './services/canActivateGuard.service';
     ProfileComponent, 
     NavbarComponent, 
     MybookingsComponent,
-    FaqComponent
+    FaqComponent,
+    UpcomingBookingsComponent,
+    PastBookingsComponent
   ],
   
   imports: [

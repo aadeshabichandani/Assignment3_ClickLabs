@@ -1,0 +1,15 @@
+.data{
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    margin: 1%;
+    background-color: rgb(212, 233, 252);  
+    text-align: left;
+}
+.childContainer
+{
+    padding-left: 82%;
+}
+.completed{
+    color: rgb(92, 218, 9);
+}

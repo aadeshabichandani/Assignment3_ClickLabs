@@ -14,13 +14,10 @@ html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
     text-shadow: 2px 2px rgb(217, 250, 205);
 }
 .container{
-
     width: 100%;
     text-align: center;
     /* height: 40%; */
-    margin-left:5%;
-   
-      
+    margin-left:5%;    
 }
 span{
   color: red;

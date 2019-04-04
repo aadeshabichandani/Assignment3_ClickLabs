@@ -1,6 +1,12 @@
 .container{
     width: 80%;
     text-align: center;
+    padding:2%;
     /* height: 40%; */
-    margin-left:5%;    
+    margin-left:5%; 
+    box-shadow: 2px 2px 12px 5px rgb(4, 134, 4);
+}
+.booking-button
+{
+    margin: 8px;
 }

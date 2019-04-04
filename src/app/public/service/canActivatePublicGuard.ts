@@ -1,4 +1,4 @@
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router'
+import { CanActivate, Router } from '@angular/router'
 import { Injectable } from '@angular/core';
 import {Location}  from '@angular/common';
 
@@ -6,7 +6,7 @@ import {Location}  from '@angular/common';
 
 export class CanActivatePublicGuardService implements CanActivate {
     constructor(private router: Router, private location :Location) { }
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    canActivate(): boolean {
         if (localStorage.getItem('user')) {
             if(window.confirm("You are already Looged in as '" + localStorage.getItem('user')+"'. Want to logout?"))
             {

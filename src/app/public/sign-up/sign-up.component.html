@@ -77,7 +77,7 @@
         <label class="fields">
           CONFIRM PASSWORD:<br> <input type="password" formControlName="confirm_password"
             appCheckPasswordValidator="password" /><br>
-          <span *ngIf="signUpForm.get('confirm_password').hasError('notEqual') || signUpForm.get('confirm_password').touched">
+          <span *ngIf="signUpForm.get('confirm_password').hasError('notEqual') && signUpForm.get('confirm_password').touched">
             Password and Confirm password does not match!
           </span>
           <span
@@ -89,7 +89,6 @@
         <!-- </div>  -->
         <br>
       </div> <br>
-      {{signUpForm.status}}
       <button type="submit">Submit</button>
     </form>
   </div> <br>

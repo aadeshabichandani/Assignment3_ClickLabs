@@ -1,0 +1,18 @@
+<div class="data" *ngFor="let upcoming of upcomingData">
+  <p>{{upcoming.date}},{{upcoming.time}}</p>
+  <div class="childContainer">
+    <p [ngClass]="{
+      'started':upcoming.status === 'started',
+      'pending':upcoming.status === 'pending',
+      'onWay':upcoming.status === 'on the way'
+    }">
+      <b>{{upcoming.status | uppercase}}</b>
+    </p>
+  </div>
+
+  <p><b>{{upcoming.city}}</b>
+    <br>
+    {{upcoming.address}}
+  </p>
+
+</div>

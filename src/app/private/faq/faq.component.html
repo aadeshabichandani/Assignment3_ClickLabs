@@ -1,14 +1,15 @@
-
-<div class="container">
-<p class="accordion">Q1. What currency is the course charged in?</p>
-<div class="panel">A. The course is charged in Australian dollars.</div>
-
-<p class="accordion">Q2. What if the course doesn’t help me?</p>
-<div class="panel">A. If it doesn't help you I'll refund the purchase price in full.</div>
-
-<p class="accordion">Q3. When will the webinars take place?</p>
-<div class="panel">A. Depending on the mix of countries and time zones for people attending the webinars, I will pick a time that works best for most participants. All webinars will be recorded so you can listen to them again. The private Facebook group will obviously be available 24/7 and I’ll be monitoring and contributing to the discussion regularly.</div>
-
-<p class="accordion">Q4. What is the self-directed mentoring program?</p>
-<div class="panel">A. The self-directed mentoring program is designed to help you set-up and run an effective mentee-mentor relationship as part of the course.</div>
-</div>
+<div class="container"> 
+    <div id="accordion" class="accordion"> 
+    <div class="card mb-0" *ngFor="let x of faq"> 
+    <a class="card-header collapsed" data-toggle="collapse" href="#collapseOne{{x.id}}"> 
+    <div class="card-title"> 
+    {{x.id}} {{x.ques}} 
+    </div> 
+    </a> 
+    <div id="collapseOne{{x.id}}" class="card-body collapse" data-parent="#accordion" > 
+    <p>{{x.myfaq}}</p> 
+    </div> 
+    
+    </div> 
+    </div> 
+    </div>
