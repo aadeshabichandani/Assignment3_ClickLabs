@@ -1,0 +1,57 @@
+{
+  "registeredUsers": [
+    {
+      "first_name": "Aadesh",
+      "last_name": "Abichandani",
+      "email": "aadesh@gmail.com",
+      "phone_number": 123,
+      "address": "aades",
+      "medical_history": "",
+      "password": "aadesh",
+      "confirm_password": "aadesh",
+      "id": 1
+    },
+    {
+      "first_name": "shubham",
+      "last_name": "tiwari",
+      "email": "aasd@gmail.com",
+      "phone_number": 345,
+      "address": "qer",
+      "medical_history": "",
+      "password": "uiop",
+      "confirm_password": "uiop",
+      "id": 2
+    },
+    {
+      "first_name": "a",
+      "last_name": "a",
+      "email": "a",
+      "phone_number": 12,
+      "address": "a",
+      "medical_history": "a",
+      "password": "a",
+      "confirm_password": "a",
+      "id": 3
+    },
+    {
+      "first_name": "rahul",
+      "last_name": "sharma",
+      "email": "ragul@gmail.com",
+      "phone_number": 123,
+      "address": "www",
+      "medical_history": "q",
+      "password": "aadesh",
+      "confirm_password": "aadesh",
+      "id": 4
+    }
+  ],
+  "bookings": [
+    {
+      "date":"",
+      "time":"",
+      "city":"",
+      "address":""
+    }
+  ],
+  "faq": {}
+}

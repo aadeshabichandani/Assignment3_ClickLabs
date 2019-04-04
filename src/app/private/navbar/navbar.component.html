@@ -1,0 +1,18 @@
+
+
+<ul class="topBar">
+    
+    <li><a class="brand" routerLink="/authenticatedUser">Aadesh</a></li>
+    <li class="dropdown link">
+      <a class="dropbtn">Dropdown</a>
+      <div class="dropdown-content">
+        <li><a routerLink="/authenticatedUser">{{firstName+" "+lastName}}</a></li> <br>
+      <li><a routerLink="/authenticatedUser/bookings">My Bookings (5) </a> </li> <br>
+      <li><a routerLink="/authenticatedUser/faq">FAQs</a> </li> <br>
+      <li ><a class="logout" (click) = "logout()">Logout</a> </li> <br>      
+      </div><i class="arrow down"></i>
+    </li>
+   
+  </ul>
+  <h3><p class="dynamicHeader">{{header}}</p></h3>
+  <router-outlet></router-outlet>

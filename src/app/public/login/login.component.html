@@ -1,0 +1,19 @@
+<div class="login-page">
+  <div class="form">
+    <form [formGroup] = "loginForm"class="login-form" (submit) = "loginFormSubmit()"> 
+      <p class="login-heading"> LOGIN</p>
+      <hr>
+      <br>
+      <!-- <div *ngIf= "loginForm.controls['loginEmail'].errors.required">
+      <p>required field</p>  
+      </div> -->
+        <p class="textNote">Email</p>
+        <input type="email" placeholder="abc@xyz.com" formControlName = "loginEmail"/>
+      
+      <p class="textNote">Password</p>
+      <input type="password" placeholder="******" formControlName = "loginPassword"/>
+      <input type="submit" value="Login">
+      <p class="message">Not registered? <a routerLink="/signup">Sign-Up!</a></p>
+    </form>
+  </div>
+</div>
