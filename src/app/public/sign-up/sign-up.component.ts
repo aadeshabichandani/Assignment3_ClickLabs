@@ -12,7 +12,7 @@ export class SignUpComponent implements OnInit {
   signUpForm = this.fBuilder.group({
     first_name: ['', Validators.required],
     last_name: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [Validators.required,Validators.email]],
     phone_number: ['', Validators.required],
     address: ['', Validators.required],
     medical_history: [''],

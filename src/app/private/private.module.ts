@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { FaqComponent } from './faq/faq.component';
+import { CanActivateGuardService } from './services/canActivateGuard.service';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FaqComponent } from './faq/faq.component';
     PrivateRoutingModule,
     ReactiveFormsModule,
     HttpClientModule
-  ]
+  ],
+  providers:[CanActivateGuardService]
 })
 export class PrivateModule { }

@@ -4,6 +4,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { FaqComponent } from './faq/faq.component';
+import { CanActivateGuardService } from './services/canActivateGuard.service';
 
 const privateRoutes: Routes = [
   {
@@ -12,15 +13,18 @@ const privateRoutes: Routes = [
     children:[
       {
         path:"",
-        component:ProfileComponent
+        component:ProfileComponent,
+        canActivate:[CanActivateGuardService]
       },
       {
         path:"bookings",
-        component:MybookingsComponent
+        component:MybookingsComponent,
+        canActivate:[CanActivateGuardService]
       },
       {
         path:"faq",
-        component:FaqComponent
+        component:FaqComponent,
+        canActivate:[CanActivateGuardService]
       }
 
     ]

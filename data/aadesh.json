@@ -1,15 +1,16 @@
 {
   "registeredUsers": [
     {
-      "first_name": "Aadesh",
-      "last_name": "Abichandani",
+      "first_name": "Smart",
+      "last_name": "Guy",
       "email": "aadesh@gmail.com",
-      "phone_number": 123,
-      "address": "aades",
-      "medical_history": "",
+      "phone_number": "123456",
+      "address": "asdfg",
+      "medical_history": "NA",
       "password": "aadesh",
       "confirm_password": "aadesh",
-      "id": 1
+      "id": 1,
+      "full_name": "Smart Guy"
     },
     {
       "first_name": "shubham",
@@ -47,10 +48,11 @@
   ],
   "bookings": [
     {
-      "date":"",
-      "time":"",
-      "city":"",
-      "address":""
+      "status":"",
+      "date": "",
+      "time": "",
+      "city": "",
+      "address": ""
     }
   ],
   "faq": {}

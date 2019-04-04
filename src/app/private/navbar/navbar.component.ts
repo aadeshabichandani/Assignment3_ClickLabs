@@ -35,6 +35,4 @@ export class NavbarComponent implements OnInit {
     localStorage.clear();
     this.route.navigate([""]);
   }
-  
-
 }

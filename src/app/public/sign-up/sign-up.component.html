@@ -36,6 +36,8 @@
             <br>
             <span *ngIf="signUpForm.get('email').hasError('required')&& signUpForm.get('email').touched">Required!
             </span>
+            <span *ngIf="signUpForm.get('email').hasError('email')&& signUpForm.get('email').touched">Invalid Email!
+            </span>
           </label>
         </p>
 
@@ -75,7 +77,7 @@
         <label class="fields">
           CONFIRM PASSWORD:<br> <input type="password" formControlName="confirm_password"
             appCheckPasswordValidator="password" /><br>
-          <span *ngIf="signUpForm.get('confirm_password').hasError('notEqual')">
+          <span *ngIf="signUpForm.get('confirm_password').hasError('notEqual') || signUpForm.get('confirm_password').touched">
             Password and Confirm password does not match!
           </span>
           <span

@@ -2,16 +2,9 @@
 
 html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
   .sign-up-heading{
-    
-    color: #4CAF50;
-    font-weight: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;   
-    font-size: 36px;
     line-height: 42px;
     padding-top: 30px;
     text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 2px rgb(217, 250, 205);
 }
 .container{
 

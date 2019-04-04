@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm = this.loginBuilder.group({
-    loginEmail: ['', Validators.required],
+    loginEmail: ['', [Validators.required,Validators.email]],
     loginPassword: ['', Validators.required],
 
   });
@@ -29,12 +29,15 @@ export class LoginComponent implements OnInit {
             localStorage.setItem("user", this.loginForm.value.loginEmail);
             localStorage.setItem("firstName", fetchedData[0].first_name);
             localStorage.setItem("lastName", fetchedData[0].last_name);
-
+            localStorage.setItem("id", fetchedData[0].id);
 
           }
           else {
             alert("Incorrect Password");
           }
+        }
+        else if(Object.keys(fetchedData).length > 1){
+          alert("We have found same credentials for multiple users! We are working on that fix :)")
         }
         else {
           alert("Not registered! Please register yourself first!");
@@ -43,8 +46,7 @@ export class LoginComponent implements OnInit {
         }
       });
     }
-    else
-    {
+    else {
       alert("Please fill the details correctly!");
     }
   }
