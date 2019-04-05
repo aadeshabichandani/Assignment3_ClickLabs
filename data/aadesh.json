@@ -1,16 +1,16 @@
 {
   "registeredUsers": [
     {
-      "first_name": "Aadesh",
-      "last_name": "Abichandani",
-      "email": "abichandani@gmail.com",
+      "first_name": "aadesh",
+      "last_name": "abichandani",
+      "email": "aadesh@gmail.com",
       "phone_number": "123456",
       "address": "asdfg",
       "medical_history": "NA",
       "password": "aadesh",
       "confirm_password": "aadesh",
       "id": 1,
-      "full_name": "Aadesh Abichandani"
+      "full_name": "aadesh abichandani"
     },
     {
       "first_name": "shubham",
@@ -55,26 +55,37 @@
       "password": "as",
       "confirm_password": "as",
       "id": 5
+    },
+    {
+      "first_name": "Sonu",
+      "last_name": "Mehta",
+      "email": "sonu@gmail",
+      "phone_number": "123",
+      "address": "asd",
+      "medical_history": "",
+      "password": "qwerty",
+      "confirm_password": "qwerty",
+      "id": 6
     }
   ],
   "upcomingbookings": [
     {
       "status": "started",
-      "date": "27/09/2017",
+      "date": "2017-29-09",
       "time": "09:00am",
       "city": "CDCL,Chandigarh",
       "address": "Purva Marg : 5, Sector:28B"
     },
     {
       "status": "pending",
-      "date": "27/09/2017",
+      "date": "2017-29-09",
       "time": "10:00am",
       "city": "CDCL,Chandigarh",
       "address": "Purva Marg:215, Sector:78B"
     },
     {
       "status": "on the way",
-      "date": "27/09/2017",
+      "date": "2017-12-08",
       "time": "10:00am",
       "city": "Gandhinagar,Gujarat",
       "address": "Gandhi Marg:51, Sector:8A"
@@ -83,14 +94,14 @@
   "pastbookings": [
     {
       "status": "completed",
-      "date": "17/07/2016",
+      "date": "2016-19-10",
       "time": "11:00am",
       "city": "Amritsar, Punjab",
       "address": "Purva Marg:215, Sector:78B"
     },
     {
       "status": "completed",
-      "date": "22/03/2016",
+      "date": "2016-22-03",
       "time": "06:00am",
       "city": "Shimla,Himachal",
       "address": "Dakshin Marg:25, Sector:12D"

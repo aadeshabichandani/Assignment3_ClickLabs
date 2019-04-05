@@ -42,15 +42,14 @@ export class ProfileComponent implements OnInit {
     });
 
     // fetching data using our service, and passing email as the parameter to identify unique user.
-    this.getService.gettingData(this.email).subscribe((fetchedData: dataFormat) => {
-      this.fetchedUserData = fetchedData[0];
+    this.getService.gettingDataById(this.uniqueId).subscribe((fetchedData: dataFormat) => {
 
       // setting the form control values with the fetched data of a particular user .
-      this.profileForm.controls['full_name'].setValue(this.fetchedUserData.first_name + " " + this.fetchedUserData.last_name);
-      this.profileForm.controls['email'].setValue(this.fetchedUserData.email);
-      this.profileForm.controls['phone_number'].setValue(this.fetchedUserData.phone_number);
-      this.profileForm.controls['address'].setValue(this.fetchedUserData.address);
-      this.profileForm.controls['medical_history'].setValue(this.fetchedUserData.medical_history);
+      this.profileForm.controls['full_name'].setValue(fetchedData.first_name + " " + fetchedData.last_name);
+      this.profileForm.controls['email'].setValue(fetchedData.email);
+      this.profileForm.controls['phone_number'].setValue(fetchedData.phone_number);
+      this.profileForm.controls['address'].setValue(fetchedData.address);
+      this.profileForm.controls['medical_history'].setValue(fetchedData.medical_history);
 
       if (this.profileForm.controls['medical_history'].value == "") {
         this.profileForm.controls['medical_history'].setValue("NA");
@@ -73,10 +72,13 @@ export class ProfileComponent implements OnInit {
           this.profileForm.get("first_name").setValue(this.fullName[0]);
           this.profileForm.controls['last_name'].setValue(this.fullName[1]);
           this.patchService.patchingUserData(this.uniqueId, this.profileForm.value).subscribe(() => {
+            
             //  success callback
-            alert("Details updated successfully!");
             localStorage.setItem("firstName", this.fullName[0]);
             localStorage.setItem("lastName", this.fullName[1]);
+            localStorage.setItem("user",this.profileForm.value.email)
+            alert("Details updated successfully!");
+
             //reloading our current webpage. 
             location.reload();
           },

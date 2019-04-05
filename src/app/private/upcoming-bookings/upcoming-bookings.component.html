@@ -1,6 +1,6 @@
 
 <div class="data" *ngFor="let upcoming of upcomingData">
-  <p>{{upcoming.date}},{{upcoming.time}}</p>
+  <p>{{upcoming.date | date}},{{upcoming.time}}</p>
   <div class="childContainer">
 
     <!-- using ngClass to differtiate the styling based on the fetched status -->
