@@ -1,6 +1,8 @@
+
 <div class="data" *ngFor="let past of pastData">
     <p>{{past.date}},{{past.time}}</p>
     <div class="childContainer">
+      <!-- child container for storing the staus -->
       <p [ngClass]="{
         'completed':past.status === 'completed'
       }">

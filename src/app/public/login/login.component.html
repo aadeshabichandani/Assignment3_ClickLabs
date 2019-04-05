@@ -1,26 +1,27 @@
 <div class="login-page">
   <div class="form">
-    <form [formGroup] = "loginForm"class="login-form" (submit) = "loginFormSubmit()"> 
+    <form [formGroup]="loginForm" class="login-form" (submit)="loginFormSubmit()">
       <p class="login-heading"> LOGIN</p>
       <hr>
       <br>
-      <!-- <div *ngIf= "loginForm.controls['loginEmail'].errors.required">
-      <p>required field</p>  
-      </div> -->
-        <p class="textNote">Email
-        <input type="email" placeholder="abc@xyz.com" formControlName = "loginEmail"/>
+      <p class="textNote">Email
+        <input type="email" placeholder="abc@xyz.com" formControlName="loginEmail" />
+        <!-- validator error message -->
         <span *ngIf="loginForm.get('loginEmail').hasError('required')&& loginForm.get('loginEmail').touched">Required!
-            </span>
-            <span *ngIf="loginForm.get('loginEmail').hasError('email')&& loginForm.get('loginEmail').touched">Invalid Email!
-            </span>
+        </span>
+        <!-- validator error message -->
+        <span *ngIf="loginForm.get('loginEmail').hasError('email')&& loginForm.get('loginEmail').touched">Invalid Email!
+        </span>
       </p>
-      
+
       <p class="textNote">Password
-      <input type="password" placeholder="******" formControlName = "loginPassword"/>
-      <span *ngIf="loginForm.get('loginPassword').hasError('required')&& loginForm.get('loginPassword').touched">Required!
-      </span>
-    </p>
-      <input class = "submitButton" type="submit" value="Login">
+        <input type="password" placeholder="******" formControlName="loginPassword" />
+        <!-- validator error message -->
+        <span
+          *ngIf="loginForm.get('loginPassword').hasError('required')&& loginForm.get('loginPassword').touched">Required!
+        </span>
+      </p>
+      <input class="submitButton" type="submit" value="Login">
       <p class="message">Not registered? <a routerLink="/signup">Sign-Up!</a></p>
     </form>
   </div>

@@ -10,6 +10,8 @@
 {
     padding-left: 82%;
 }
+
+/* ngClass's css styling */
 .started{
     color: rgb(54, 16, 61);
 }

@@ -10,6 +10,8 @@ export class PatchDataService {
 
   patchingUserData(id,updateFormData)
   {
+    //using patch to update partial values of the currect object.
+    //two params are passed. One to uniquely identify the user and second the changes.
     return this.patchHttp.patch("http://localhost:3000/registeredUsers/"+id,updateFormData);
   }
 }

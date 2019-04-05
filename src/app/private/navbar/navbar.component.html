@@ -1,48 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <!-- BrandName of our navbar -->
+  <a class="navbar-brand">ClickLabs</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav drop">
 
 
-<!-- <ul class="topBar">
-    
-    <li><a class="brand" routerLink="/authenticatedUser">ClickLabs</a></li>
-    <li class="dropdown link">
-      <a class="dropbtn">{{firstName}}</a>
-      <div class="dropdown-content">
-        <li><a routerLink="/authenticatedUser">{{firstName+" "+lastName}}</a></li> <br>
-      <li><a routerLink="/authenticatedUser/bookings">My Bookings  </a> </li> <br>
-      <li><a routerLink="/authenticatedUser/faq">FAQs</a> </li> <br> 
-      <li ><a class="logout" (click) = "logout()">Logout</a> </li> <br>      
-      </div><i class="arrow down"></i>
-    </li>
-   
-  </ul> -->
+      <li id="name-drop" class="nav-item dropdown">
+        <a class="content nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          
+          <b>{{firstName+" "+lastName}}</b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!-- Drop down menu items. -->
+          <a class="dropdown-item" (click)="navigateToProfile()">{{firstName+" "+lastName}}</a>
+          <hr>
+          <a class="dropdown-item" (click)="navigateToBookings()">My Bookings{{totalBookings}}</a>
+          <a class="dropdown-item" (click)="navigateToFaqs()">FAQs</a>
+          <a class="dropdown-item" (click)="logout()">LogOut</a>
 
-  <nav  class="navbar navbar-expand-lg navbar-dark ">
-    <a class="navbar-brand">ClickLabs</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav drop" >
-        
-        
-        <li id = "name-drop" class="nav-item dropdown">
-          <a class="content nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>{{firstName+" "+lastName}}</b>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" (click)="navigateToProfile()">{{firstName+" "+lastName}}</a>
-            <hr>
-            <a class="dropdown-item" (click) = "navigateToBookings()">My Bookings{{totalBookings}}</a>
-            <a class="dropdown-item" (click) = "navigateToFaqs()">FAQs</a>
-            <a class="dropdown-item" (click) = "logout()">LogOut</a>
-            
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
 <br>
 
 
-  <h3><p class="dynamicHeader">{{header}}</p></h3>
- 
-  <router-outlet></router-outlet>
+<h3>
+  <p class="dynamicHeader">{{header}}</p>
+</h3>
+
+<router-outlet></router-outlet>

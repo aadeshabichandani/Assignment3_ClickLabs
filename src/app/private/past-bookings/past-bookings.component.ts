@@ -9,14 +9,16 @@ import { bookingsDataFormat } from 'src/data-format/bookingsDataFormat';
 })
 export class PastBookingsComponent implements OnInit {
 
-  constructor(private getService:GetDataService) { }
-  public pastData:any;
+  constructor(private getService: GetDataService) { }
+  public pastData: any;
   ngOnInit() {
-    this.getService.gettingPastBookingsData().subscribe((pastData)=>
-    {
-      this.pastData=pastData;
+
+    // calling the getDataService to fetch the data for past Bookings.
+
+    this.getService.gettingPastBookingsData().subscribe((pastData) => {
+      this.pastData = pastData;
     })
   }
-  
+
 
 }

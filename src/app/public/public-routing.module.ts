@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {LoginComponent} from './login/login.component';
-import {SignUpComponent} from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { CanActivatePublicGuardService } from './service/canActivatePublicGuard';
 
 const publicRoutes: Routes = [
   {
     path: 'login',
-    canActivate:[CanActivatePublicGuardService],
-    component:LoginComponent
+    canActivate: [CanActivatePublicGuardService],//authGuard to monitor unwanted routing from private to public pages
+    component: LoginComponent
   },
   {
-    path:'signup',
-    canActivate:[CanActivatePublicGuardService],
-    component:SignUpComponent
+    path: 'signup',
+    canActivate: [CanActivatePublicGuardService],
+    component: SignUpComponent
 
   },
   {
-    path :'',redirectTo:'/signup',pathMatch:'full'
+    path: '', redirectTo: '/signup', pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  declarations:[],
+  declarations: [],
   imports: [RouterModule.forChild(publicRoutes)],
   exports: [RouterModule]
 })

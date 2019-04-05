@@ -10,36 +10,40 @@ import { PastBookingsComponent } from './past-bookings/past-bookings.component';
 
 const privateRoutes: Routes = [
   {
-    path:"",
-    canActivate:[CanActivateGuardService],
-    component:NavbarComponent,
-    children:[
+    //route array
+
+    path: "", //empty path because to load this component whenever this private module route has been called.
+    canActivate: [CanActivateGuardService],//authGuards to allow logged in users only
+    component: NavbarComponent,
+    children: [
       {
-        path:"",
-        component:ProfileComponent
+        // parent-child routing
+        path: "",
+        component: ProfileComponent
       },
       {
-        path:"bookings",
-        component:MybookingsComponent,
-        children:[
+        path: "bookings",
+        component: MybookingsComponent,
+        children: [
           {
-            path:"upcomingEvents",
-            component:UpcomingBookingsComponent
+            // further parent-child routing
+            path: "upcomingEvents",
+            component: UpcomingBookingsComponent
           },
           {
-            path:"pastEvents",
-            component:PastBookingsComponent,
+            path: "pastEvents",
+            component: PastBookingsComponent,
           },
           {
-            path:"",
-            redirectTo:"upcomingEvents",
-            pathMatch:"full"
+            path: "", //empty path so that this component gets activated as soon as it's parent component gets activated.
+            redirectTo: "upcomingEvents",
+            pathMatch: "full"
           }
         ]
       },
       {
-        path:"faq",
-        component:FaqComponent
+        path: "faq",
+        component: FaqComponent
       }
 
     ]

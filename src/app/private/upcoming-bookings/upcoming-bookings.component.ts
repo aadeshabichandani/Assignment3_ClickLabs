@@ -9,10 +9,14 @@ import { GetDataService } from 'src/app/public/service/get-data.service';
 export class UpcomingBookingsComponent implements OnInit {
 
   constructor(private getService:GetDataService) { }
-  upcomingData;
+  
+  // declaring some variables
+  public upcomingData:any;
+  
   ngOnInit() {
     this.getService.gettingUpcomingBookingsData().subscribe((upcoming)=>
     {
+      // fetching the upcoming bookings data from the server.
       this.upcomingData=upcoming;
     });
   }

@@ -1,6 +1,9 @@
+
 <div class="data" *ngFor="let upcoming of upcomingData">
   <p>{{upcoming.date}},{{upcoming.time}}</p>
   <div class="childContainer">
+
+    <!-- using ngClass to differtiate the styling based on the fetched status -->
     <p [ngClass]="{
       'started':upcoming.status === 'started',
       'pending':upcoming.status === 'pending',

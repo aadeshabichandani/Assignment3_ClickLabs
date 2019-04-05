@@ -20,7 +20,7 @@ p.accordion {
     margin-bottom:10px;
 }
 
-/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Add a background color to the accordion  */
 p.accordion.active, p.accordion:hover {
     background-color: #ddd;
 }
